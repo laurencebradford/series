@@ -1,0 +1,9 @@
+<template name="homeLayout">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<div class="layout home-layout">
+		{{> navbar }}
+		{{#if currentUser}}
+			{{> postsList}}
+		{{/if}}
+	</div>
+</template>

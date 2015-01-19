@@ -1,0 +1,28 @@
+<template name="postList">
+	<p>this is the postsList template</p>
+  <p>I want a running lists of posts to go here. and only people signed in can see.</p>
+	{{#each Posts}}
+		{{post}}
+	{{/each}}
+		
+
+</template>
+
+<template name="postListLoop">
+	{{#each posts}}
+    <article class="post">
+      <h2>
+        <a href="#">{{title}}</a>
+      </h2>
+      <div class="post-meta">
+        By {{authorName}} on {{blogFormatDate publishedAt}}
+        
+      </div>
+      <div class="the-content">
+        {{{content}}}
+      </div>
+    </article>
+  {{else}}
+    This blog is looking pretty empty...
+  {{/each}}
+</template>
